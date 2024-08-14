@@ -1,6 +1,6 @@
 {
     "name": "@dasred/komoot-client",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "main": "src/index.js",
     "type": "module",
     "author": "DasRed",
@@ -24,6 +24,7 @@
         "@semantic-release/commit-analyzer": "^13.0.0",
         "@semantic-release/git": "^10.0.1",
         "@semantic-release/github": "^10.1.4",
+        "@semantic-release/npm": "^12.0.1",
         "semantic-release": "^24.0.0",
         "semantic-release-cli": "^5.4.6"
     },
@@ -40,6 +41,10 @@
         ],
         "plugins": [
             "@semantic-release/commit-analyzer",
+            {
+                "path": "@semantic-release/npm",
+                "npmPublish": false
+            },
             {
                 "path": "@semantic-release/git",
                 "assets": [
