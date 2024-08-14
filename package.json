@@ -1,0 +1,55 @@
+{
+    "name": "@dasred/komoot-client",
+    "version": "0.0.0",
+    "main": "src/index.js",
+    "type": "module",
+    "author": "DasRed",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/DasRed/komoot-client/issues"
+    },
+    "homepage": "https://dasred.github.io/komoot-client",
+    "engines": {
+        "node": ">=22.6.0",
+        "npm": ">=10.8.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DasRed/komoot-client.git"
+    },
+    "files": [
+        "src/*"
+    ],
+    "devDependencies": {
+        "@semantic-release/commit-analyzer": "^13.0.0",
+        "@semantic-release/git": "^10.0.1",
+        "@semantic-release/github": "^10.1.4",
+        "@semantic-release/npm": "^12.0.1",
+        "semantic-release": "^24.0.0",
+        "semantic-release-cli": "^5.4.6"
+    },
+    "scripts": {
+        "semantic-release": "semantic-release"
+    },
+    "publishConfig": {
+        "access": "restricted",
+        "registry": "https://npm.pkg.github.com"
+    },
+    "release": {
+        "branches": [
+            "main"
+        ],
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/npm",
+            {
+                "path": "@semantic-release/git",
+                "assets": [
+                    "package.json",
+                    "package-lock.json"
+                ]
+            },
+            "@semantic-release/github"
+        ]
+    }
+}

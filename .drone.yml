@@ -1,0 +1,4 @@
+kind: template
+load: nodePackagePublishToGithub.jsonnet
+data:
+  node: 22
