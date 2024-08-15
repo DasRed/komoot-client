@@ -12,9 +12,16 @@ export default class Tour {
         this.date       = new Date(data.date);
         this.kcal       = {active: data.kcal_active, resting: data.kcal_resting};
         this.startPoint = new Coordinate(data.start_point);
-        this.distance   = data.distance;
-        this.duration   = {total: data.duration, inMotion: data.time_in_motion};
-        this.elevation  = {up: data.elevation_up, down: data.elevation_down};
+        this.distance   = data.distance / 1000;
+        this.duration   = {
+            total:    data.duration / 60 / 60,
+            inMotion: (data.time_in_motion ?? data.duration) / 60 / 60,
+        };
+        this.elevation  = {
+            up:    data.elevation_up,
+            down:  data.elevation_down,
+            total: data.elevation_up - data.elevation_down
+        };
         this.sport      = data.sport;
         this.changedAt  = new Date(data.changed_at);
 
