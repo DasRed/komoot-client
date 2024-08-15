@@ -3,7 +3,7 @@ import Tour from './model/Tour.js';
 export default class Client {
     static URL = {
         LOGIN:      'https://api.komoot.de/v006/account/email/{email}/',
-        TOURS_MADE: 'https://api.komoot.de/v007/users/{authUserId}/tours/?sort_types=&type=tour_recorded&sort_field=date&sort_direction=desc&name=&status=private&hl=de&page={page}&limit=50',
+        TOURS_MADE: 'https://api.komoot.de/v007/users/{authUserId}/tours/?sort_types=&type=tour_recorded&sort_field=date&sort_direction={sortDirection}&name=&status=private&hl=de&page={page}&limit=50',
     }
 
     constructor({email, password, headers = {}}) {
@@ -61,16 +61,25 @@ export default class Client {
     }
 
     prepareUrl(url, parameters = {}, defaultParameters = {email: this.email, authUserId: this.authUserId}) {
-        return Object.entries({...defaultParameters, ...parameters}).reduce((acc, [key, value]) => acc.replaceAll(`{${key}}`, value), url);
+        return Object.entries({...defaultParameters, ...parameters}).reduce((acc, [key, value]) => acc.replaceAll(`{${key}}`, encodeURIComponent(value)), url);
     }
 
-    async toursMade() {
+    async toursMade({sortDirection = 'asc', sportTypes = undefined, startDate = undefined}) {
         let page  = 0;
         let count = 0;
         let tours = [];
 
+        let url = Client.URL.TOURS_MADE;
+        if (sportTypes !== undefined) {
+            url += '&sport_types={sportTypes}';
+        }
+
+        if (startDate !== undefined) {
+            url += '&start_date={startDate}';
+        }
+
         do {
-            const data = await this.fetch(Client.URL.TOURS_MADE, {page});
+            const data = await this.fetch(url, {page, sortDirection, sportTypes, startDate});
             count      = data._embedded?.tours?.length ?? 0;
             tours      = tours.concat(data._embedded?.tours ?? []);
             page++;
