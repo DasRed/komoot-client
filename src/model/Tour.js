@@ -17,6 +17,10 @@ export default class Tour {
             total:    data.duration / 60 / 60,
             inMotion: (data.time_in_motion ?? data.duration) / 60 / 60,
         };
+        this.speed = {
+            total: this.distance / this.duration.total,
+            inMotion: this.distance / this.duration.inMotion,
+        };
         this.elevation  = {
             up:    data.elevation_up,
             down:  data.elevation_down,
