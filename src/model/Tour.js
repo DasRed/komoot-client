@@ -17,8 +17,8 @@ export default class Tour {
             total:    data.duration / 60 / 60,
             inMotion: (data.time_in_motion ?? data.duration) / 60 / 60,
         };
-        this.speed = {
-            total: this.distance / this.duration.total,
+        this.speed      = {
+            total:    this.distance / this.duration.total,
             inMotion: this.distance / this.duration.inMotion,
         };
         this.elevation  = {
@@ -39,5 +39,23 @@ export default class Tour {
         }
 
         return this.#coordinates;
+    }
+
+    toJSON() {
+        return {
+            id:         this.id,
+            type:       this.type,
+            name:       this.name,
+            status:     this.status,
+            date:       this.date.toJSON(),
+            kcal:       {...this.kcal},
+            startPoint: this.startPoint.toJSON(),
+            distance:   this.distance,
+            duration:   {...this.duration},
+            speed:      {...this.speed},
+            elevation:  {...this.elevation},
+            sport:      this.sport,
+            changedAt:  this.changedAt.toJSON(),
+        };
     }
 }
