@@ -1,6 +1,6 @@
 ---
 title: Überblick
-description: Kleiner Node.js-Client, der sich bei komoot anmeldet und deine aufgezeichneten Touren samt Strecke als Objekte liefert.
+description: Kleiner Node.js-Client, der sich bei komoot anmeldet und deine aufgezeichneten Touren samt Strecke als Objekte liefert. Kurzbeispiel, Funktionen und Status.
 order: 0
 section: Einstieg
 ---

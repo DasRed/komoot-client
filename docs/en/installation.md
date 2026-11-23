@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: Install komoot-client straight from the GitHub repository, Node.js requirements.
+description: Install komoot-client via npm straight from the GitHub repository. Which Node.js version you need, why Git is required and that the package is pure ESM.
 order: 10
 slug: installation
 section: Getting started

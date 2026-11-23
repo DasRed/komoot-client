@@ -1,6 +1,6 @@
 ---
 title: Verwendung
-description: Touren mit komoot-client laden, filtern, Koordinaten nachladen und als JSON speichern.
+description: Mit komoot-client anmelden, Touren laden, filtern und sortieren, Werte einer Tour lesen, Koordinaten nachladen, als JSON speichern und eigene Header setzen.
 order: 20
 slug: verwendung
 section: Einstieg

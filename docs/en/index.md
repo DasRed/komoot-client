@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Small Node.js client that signs in to komoot and returns your recorded tours, including the route, as objects.
+description: Small Node.js client that signs in to komoot and returns your recorded tours, including the route, as objects. Quick example, features and current status.
 order: 0
 section: Getting started
 ---

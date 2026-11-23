@@ -1,6 +1,6 @@
 ---
 title: Usage
-description: Load tours with komoot-client, filter them, load coordinates and save them as JSON.
+description: Sign in with komoot-client, load, filter and sort tours, read the values of a tour, load coordinates, save them as JSON and send your own headers.
 order: 20
 slug: usage
 section: Getting started

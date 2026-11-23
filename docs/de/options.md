@@ -1,6 +1,6 @@
 ---
 title: Optionen
-description: Konstruktor, Methoden und alle Felder von Tour und Coordinate im komoot-client, mit Einheiten und Grenzen.
+description: Referenz von komoot-client mit Exporten, Konstruktor, Methoden, Filtern für toursMade() und allen Feldern von Tour und Coordinate samt Einheiten und Grenzen.
 order: 30
 slug: optionen
 section: Referenz

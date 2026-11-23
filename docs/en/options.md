@@ -1,6 +1,6 @@
 ---
 title: Options
-description: Constructor, methods and all fields of Tour and Coordinate in komoot-client, with units and limitations.
+description: Reference of komoot-client with exports, constructor, methods, filters for toursMade() and all fields of Tour and Coordinate with their units and limits.
 order: 30
 slug: options
 section: Reference
