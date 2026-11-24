@@ -1,3 +1,9 @@
+## [1.5.3](https://github.com/DasRed/komoot-client/compare/v1.5.2...v1.5.3) (2026-11-24)
+
+### Bug Fixes
+
+* homepage fixed ([dab6b2b](https://github.com/DasRed/komoot-client/commit/dab6b2ba9a83f5f81dc2108e6e683f183d604074))
+
 ## [1.5.2](https://github.com/DasRed/komoot-client/compare/v1.5.1...v1.5.2) (2026-11-24)
 
 ### Bug Fixes
