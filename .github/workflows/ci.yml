@@ -16,5 +16,7 @@ permissions:
 jobs:
   pipeline:
     uses: DasRed/github-workflows/.github/workflows/node-npm.yml@v2
+    with:
+      publish-npm: false
     secrets:
       homeassistant-webhook-url: ${{ secrets.HOMEASSISTANT_WEBHOOK_URL }}
