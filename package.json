@@ -8,7 +8,7 @@
     "bugs": {
         "url": "https://github.com/DasRed/komoot-client/issues"
     },
-    "homepage": "https://github.com/DasRed/komoot-client",
+    "homepage": "https://www.marco-starker.de/en/projects/komoot-client/docs",
     "engines": {
         "node": ">=22.6.0",
         "npm": ">=10.8.2"
