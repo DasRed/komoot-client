@@ -1,3 +1,9 @@
+## [1.5.2](https://github.com/DasRed/komoot-client/compare/v1.5.1...v1.5.2) (2026-11-24)
+
+### Bug Fixes
+
+* update github workflows ([d805752](https://github.com/DasRed/komoot-client/commit/d805752639c8877fea11ce68ae3d0d73b31805b9))
+
 ## [1.5.1](https://github.com/DasRed/komoot-client/compare/v1.5.0...v1.5.1) (2026-11-24)
 
 ### Bug Fixes
